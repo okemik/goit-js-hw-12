@@ -100,6 +100,12 @@ body {
   }
 }
 
+
+.hidden {
+  display: none !important;
+}
+
+/* Load More Button Style */
 #load-more-btn {
   margin: 30px auto;
   padding: 12px 24px;
@@ -115,8 +121,4 @@ body {
 
 #load-more-btn:hover {
   background-color: #000;
-}
-
-.hidden {
-  display: none !important;
 }
