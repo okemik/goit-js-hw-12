@@ -1,0 +1,105 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background: #fafafa;
+  }
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-form input {
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.search-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.photo-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  display: block;
+}
+
+.info {
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+  height: 60px;
+}
+
+.loader-text {
+  font-size: 32px;
+  color: #333;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  position: relative;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.loader-text::after {
+  content: 'Loading';
+  position: relative;
+  z-index: 5;
+}
+
+.loader-text::before {
+  content: '';
+  height: 6px;
+  border-radius: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  background: linear-gradient(90deg, #FF3D00, #FF9100, #FFC400);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  animation: lineGrow 5s ease-in-out infinite;
+}
+
+@keyframes lineGrow {
+
+  0%, 
+  100% {
+    background-position: center;
+    background-size: 0% 100%;
+  }
+  
+  50% {
+    background-position: center;
+    background-size: 100% 100%;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
